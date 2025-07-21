@@ -16,6 +16,7 @@ body {
   margin: 0;
   background-color: #f5f5f5;
   color: #333;
+  font-size: 1.5em;
 }
 
 header {
@@ -23,11 +24,14 @@ header {
   color: white;
   padding: 1em;
   text-align: center;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
 }
 
 .logo {
   max-height: 120px;
-  margin-bottom: 10px;
 }
 
 nav {
@@ -35,41 +39,96 @@ nav {
   border: 2px white;
   padding: 0.5em;
   text-align: center;
+  text-size:1.5em
+
 }
 
 nav a {
   color: white;
   margin: 0 1em;
   text-decoration: none;
-  font-weight: bold;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 1em;
+
 }
 
 main {
-  padding: 2em;
 }
 
 section {
+  display: grid;
   margin-bottom: 2em;
+  justify-content: center;
 }
 
 h2 {
   color: #004080;
+  font-size: 2em;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.row {
+  display: inline-flex;
+  grid-auto-rows: auto;
+  flex-wrap: wrap;
+  width: 100%;
+  border-spacing: 10px;
+  justify-items: center;
+  background-color: #0066cc;
+  font-size: 1em;
+}
+
+.column{
+  flex: 1 0 25%; /* grow / shrink/ basis-% tells the columns to take up the whole width of the row */
+  background-color: white;
+  justify-content: center;
+  text-align: center;
+  border-radius: 25px;
+  margin: 1.5em;
+  padding: 10px;
+
+}
+@media (max-width: 900px) {
+  .column {
+    flex: 1 0 50%; /* grow / shrink/ basis-% tells the columns to take up the whole width of the row */  }
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 1 0 75%; /* grow / shrink/ basis-% tells the columns to take up the whole width of the row */  }
 }
 .calendar{
-  width: 90vw;
+  width: 95vw;
   height: 80vh;
   padding: 20px;
   align-self: center;
+  justify-self: center;
   background-color: #ff8400;
 }
+.calendar-header{
+  margin-left: 1em;
+}
 .store-button {
-  display: inline-block;
+  display: flex;
   background-color: #ff8400;
   color: #000;
   padding: 10px 20px;
+  margin-bottom: 10px;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 5px;
+  justify-self: center;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
 }
 
 footer {
@@ -77,6 +136,7 @@ footer {
   color: white;
   text-align: center;
   padding: 1em;
+  font-size: 1.5em;
 }
 
 /*
